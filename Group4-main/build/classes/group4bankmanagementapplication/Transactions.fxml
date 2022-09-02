@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group4bankmanagementapplication.TransactionsController">
+   <children>
+      <BorderPane prefHeight="516.0" prefWidth="650.0" style="-fx-border-color: #275C7D; -fx-border-width: 5;">
+         <top>
+            <Pane prefHeight="216.0" prefWidth="640.0" style="-fx-background-color: e95526;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="232.0" layoutY="14.0" prefHeight="106.0" prefWidth="186.0" style="-fx-border-color: #275C7D; -fx-border-width: 2;" text="Group 4 Trust Bank" textAlignment="CENTER" textFill="#fbfbfb" wrapText="true">
+                     <font>
+                        <Font name="Tahoma Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="273.0" layoutY="143.0" text="Transactions" textFill="#275c7d">
+                     <font>
+                        <Font name="Tahoma Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="trnsLblStatus1" alignment="CENTER" disable="true" layoutX="91.0" layoutY="173.0" prefHeight="38.0" prefWidth="468.0" style="-fx-background-color: e95526;" textAlignment="CENTER" textFill="#17f802" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <TabPane prefHeight="289.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Withdrawal">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="640.0" style="-fx-background-color: #4a99b8;">
+                           <children>
+                              <Label layoutX="187.0" layoutY="19.0" text="Amount" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="trnsTxtWithdrawalAmount" layoutX="334.0" layoutY="14.0" prefHeight="41.0" prefWidth="206.0" promptText="Withdrawal Amount" style="-fx-background-color: transparent; -fx-border-color: #E95526;" />
+                              <Button fx:id="trnsBtnWithdrawal" layoutX="427.0" layoutY="167.0" mnemonicParsing="false" onAction="#trnsBtnWithdrawalHandler" style="-fx-border-color: #E95526;" text="Withdraw">
+                                 <font>
+                                    <Font name="Tahoma" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="217.0" layoutY="65.0" text="From" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="withdrawFrom" layoutX="332.0" layoutY="68.0" prefHeight="25.0" prefWidth="208.0" promptText="Select Account" />
+                              <PasswordField fx:id="withdrwPin" layoutX="334.0" layoutY="113.0" prefHeight="25.0" prefWidth="205.0" promptText="Confirm with account's  secret code" />
+                              <Label layoutX="241.0" layoutY="111.0" text="Pin" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Transfer">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #4bb7ba;">
+                           <children>
+                              <Label layoutX="173.0" layoutY="11.0" text="Amount" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="trnsTxtTransferAmount" layoutX="314.0" layoutY="6.0" prefHeight="41.0" prefWidth="206.0" promptText="Transfer Amount" style="-fx-background-color: transparent; -fx-border-color: #E95526;" />
+                              <Button fx:id="trnsBtnTransfer" layoutX="426.0" layoutY="174.0" mnemonicParsing="false" onAction="#TransferHandler" style="-fx-border-color: #E95526;" text="Transfer">
+                                 <font>
+                                    <Font name="Tahoma" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="237.0" layoutY="98.0" text="To" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="transferFrom" layoutX="313.0" layoutY="55.0" prefHeight="25.0" prefWidth="210.0" promptText="Select Account" />
+                              <Label layoutX="205.0" layoutY="53.0" text="From" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="transferTo" layoutX="312.0" layoutY="96.0" prefHeight="25.0" prefWidth="210.0" promptText="Select Wallet" />
+                              <Label layoutX="233.0" layoutY="135.0" text="Pin" textFill="#fbfbfb">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="transferPin" layoutX="311.0" layoutY="138.0" prefHeight="25.0" prefWidth="209.0" promptText="Confirm with Account's secret code" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <bottom>
+            <Pane prefHeight="36.0" prefWidth="640.0" style="-fx-background-color: #275C7D;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="trnsBtnGoBack" layoutX="226.0" mnemonicParsing="false" onAction="#trnsBtnGoBackHandler" prefHeight="37.0" prefWidth="189.0" style="-fx-border-color: #E95526;" text="Back to Dashboard">
+                     <font>
+                        <Font name="Tahoma" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

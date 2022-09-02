@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group4bankmanagementapplication.FXMLDocumentController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="538.0" prefWidth="247.0" style="-fx-background-color: #275C7D; -fx-border-color: #4BB7BA; -fx-border-width: 5px;">
+         <children>
+            <Label layoutX="23.0" layoutY="206.0" prefHeight="126.0" prefWidth="183.0" text="Group 4 Trust Bank" textAlignment="CENTER" textFill="#fbfbfb" wrapText="true">
+               <font>
+                  <Font name="Tahoma Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="34.0" prefHeight="98.0" prefWidth="129.0" style="-fx-border-color: #4BB7BA; -fx-border-width: 2;" text="Welcome" textAlignment="CENTER" textFill="#fbfbfb" wrapText="true">
+               <font>
+                  <Font name="Tahoma Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="242.0" layoutY="-2.0" prefHeight="538.0" prefWidth="294.0" style="-fx-background-color: #e95526; -fx-border-color: #4BB7BA; -fx-border-width: 5px;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="55.0" prefHeight="61.0" prefWidth="156.0" style="-fx-border-color: #4BB7BA; -fx-border-width: 2;" text="Login" textAlignment="CENTER" textFill="#fbfbfb" wrapText="true">
+               <font>
+                  <Font name="Tahoma Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="292.0" text="Username" textFill="#fbfbfb">
+               <font>
+                  <Font name="Tahoma Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="326.0" text="Pin" textFill="#fbfbfb">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="wlcmTxtUsername" alignment="CENTER" layoutX="117.0" layoutY="289.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #4BB7BA;" />
+            <TextField layoutX="117.0" layoutY="325.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="wlcmBtnLogin" layoutX="117.0" layoutY="374.0" mnemonicParsing="false" onAction="#wlcmBtnLoginHandler" text="Login" />
+            <Button fx:id="wlcmBtnCreateAccount" layoutX="171.0" layoutY="374.0" mnemonicParsing="false" onAction="#wlcmBtnCreateAccountHandler" text="Create Account" />
+            <Label fx:id="wlcmLabelStatus" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="80.0" layoutY="189.0" prefHeight="61.0" prefWidth="183.0" text="Ready to authenticate" textAlignment="CENTER" textFill="#4bb7ba" visible="false" wrapText="true">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="wlcmTxtPassword" alignment="CENTER" layoutX="117.0" layoutY="325.0" promptText="password" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
